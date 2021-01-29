@@ -1,0 +1,91 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+\usepackage{lipsum}     %lorem ipsum text
+\usepackage{titlesec}   %Section settings
+\usepackage{titling}    %Title settings
+\usepackage[margin=10em]{geometry}  %Adjusting margins
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{amsmath}    %Display equations options
+\usepackage{amssymb}    %More symbols
+\usepackage{xcolor}     %Color settings
+\usepackage{pagecolor}
+\usepackage{mdframed}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+\setlength{\columnsep}{1cm}
+
+% ====| color de la pagina y del fondo |==== %
+
+
+
+\begin{document}
+    %========================{TITLE}====================%
+    \title{{  Primer Taller Análisis Real  }}
+    \author{{Rodrigo Castillo}}
+    \date{\today}
+
+    \maketitle
+
+
+     % ====| Loguito |==== %
+    %=======================NOTES GOES HERE===================%
+    \section{La suma o el producto de dos numeros irracionales es irracional?}
+
+    \section{si $x$ es racional , $x \not= 0$ , $y \in I$ , demostrar que $x+y
+    , x-y , xy , x/y , y/x \in I $ }
+
+    \section{Muestre que la intersección arbitraria de conjuntos inductivos es
+    un conjunto inductivo}
+
+    \section{su x es un numero real arbitrario , demostrar que existe un único
+    entero $n$ tal que $n<x<x+1$ Este número $n$ se denomina la parte entera de
+    $x$ }
+
+    \section{muestre que no existe un numero nacional $r$ tal que $r ^{2} = 3$}
+
+    \section{muestre que $\sqrt{2} + \sqrt{3} \in I$}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    %=======================NOTES ENDS HERE===================%
+
+    % bib stuff
+    \nocite{*}
+    \addtocontents{toc}{{}}
+    \addcontentsline{toc}{section}{\refname}
+    \bibliographystyle{plain}
+    \bibliography{../Bibliography}
+\end{document}
